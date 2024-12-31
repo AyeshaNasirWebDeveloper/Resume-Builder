@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background : linear-gradient(135deg, #ff7e5f, #feb47b);
+    background-size: 400% 400%;
+    animation: gradientBackground 5s ease infinite;
+    background-size: cover;
+}
+
+/* Basic headings styling */
+.heading{
+    color: #7e0f34;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 50px;
+    
+}
+
+/* Heading Styling */
+#heading {
+    text-align: center;
+    color: #940453;
+    font-size: 36px;
+    text-shadow: 2px 2px 10px rgba(206, 30, 168, 0.1);
+    animation: fadeInText 3s ease-out;
+}
+
+/* Container Styling */
+.container, #resumePage {
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    background-color: #ffe0e0;
+    border-radius: 20px; /* Increased border radius */
+    padding: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); /* Elevated shadow */
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    animation: fadeIn 1.2s ease-out, scaleUp 1.2s ease-out;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* On Hover Effects */
+.container:hover, #resumePage:hover {
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+    transform: translateY(-12px);
+}
+
+/* Form and Input Styling */
+form div {
+    margin-bottom: 1.5em;
+}
+
+label, .username {
+    display: block;
+    margin: 1.5em;
+    font-weight: bold;
+    color: #5c0154;
+    font-size: 1.1em;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.85em;
+    margin-top: 0.5em;
+    border: 2px solid #5a014b;
+    border-radius: 10px; /* Smooth corners */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #004080;
+    box-shadow: 0 0 12px rgba(4, 33, 65, 0.6);
+    outline: none;
+}
+
+textarea {
+    height: 130px;
+    border-radius: 10px;
+}
+
+/* Button Styling */
+button {
+    padding: 0.85em 1.8em;
+    margin-top: 25px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(135deg, #dd0d8d, #56015e);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e406b4, #f15c8e);
+    transform: scale(1.07);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Image Styling */
+#resumePage img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    border: 5px solid #a10a44;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+#resumePage img:hover {
+    border-color: #b120be;
+    transform: scale(1.15);
+}
+
+/* Section and Text Styling */
+#resumePage h2, #resumePage p {
+    margin: 0.6em 0;
+    padding: 0.5em;
+    border-radius: 10px;
+    color: #5a014b;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+#resumePage h2:hover, #resumePage p:hover {
+    background-color: #f1f1f1;
+    border-color: #620874;
+    color: #811078;
+}
+
+/* Section Border and Background */
+#resumePage .section {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #fafafa;
+}
+.resume-content h2{
+    text-align: left;
+    color: #9c0e44;
+
+}
+.resume-content h1{
+    color: #ac0042;
+    text-align: center;
+}
+
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .container, #resumePage {
+        width: 95%;
+        padding: 16px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 13px 24px;
+    }
+
+    #resumePage img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 544px) {
+    .container, #resumePage {
+        width: 100%;
+        padding: 12px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 14px;
+    }
+}
+
+/* Gradient Background Animation */
+@keyframes gradientBackground {
+    0% {
+        background: linear-gradient(135deg, #8bc7ea, #feb47b);
+    }
+    50% {
+        background: linear-gradient(135deg, #d6fda2, #ffaa71);
+    }
+    100% {
+        background: linear-gradient(135deg, #fa80d1, #fc8f3b);
+    }
+}
+
+/* Text Fade-in Animation */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
